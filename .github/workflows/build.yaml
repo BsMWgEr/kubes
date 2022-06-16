@@ -52,8 +52,8 @@ jobs:
 
     - name: Update Kubernetes Secrets
       run: |
-        kubectl delete secret django-k8s-web-prod-env
-        kubectl create secret generic django-k8s-web-prod-env --from-env-file=web/.env.prod
+        kubectl delete secret django-k8-web-prod-env
+        kubectl create secret generic django-k8-web-prod-env --from-env-file=web/.env.prod
     - name: Update Deployment image
       run: |
         kubectl set image deployment/django-k8s-web-deployment django-k8s-web=registry.digitalocean.com/jsquad/django-k8s-web:${GITHUB_SHA::7}-${GITHUB_RUN_ID::5}
