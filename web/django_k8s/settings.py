@@ -26,9 +26,8 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 DEBUG = str(os.environ.get('DEBUG')) == "1"
 
 ENV_ALLOWED_HOSTS = os.environ.get('ENV_ALLOWED_HOSTS')
-ALLOWED_HOSTS = []
-if ENV_ALLOWED_HOSTS:
-    ALLOWED_HOSTS = [ENV_ALLOWED_HOSTS]
+ALLOWED_HOSTS = ['167.99.22.221', 'jsquad.dev']
+
 
 # Application definition
 
