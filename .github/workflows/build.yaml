@@ -17,15 +17,15 @@ jobs:
     env:
       CLUSTER_NAME: django-k8s
     steps:
-    - name: Checking out code...
+    - name: Checking out code
       uses: actions/checkout@v2
-    - name: Installing doctl...
+    - name: Installing doctl
       uses: digitalocean/action-doctl@v2
       with:
         token: ${{ secrets.DO_API_TOKEN_KEY }}
     - name: Logging-in to DO Container Registry with short-lived creds...
       run: doctl registry login --expiry-seconds 1200
-    - name: Building container image...
+    - name: Building container image
       working-directory: ./web
       run: |
         docker build -f Dockerfile \
