@@ -36,7 +36,7 @@ jobs:
       run: |
         doctl kubernetes cluster kubeconfig save --expiry-seconds 600 main
     - name: Update deployment secrets
-      run: echo "
+      run: cat << EOF > web/.env.prod
         DJANGO_SUPERUSER_USERNAME=${{ secrets.DJANGO_SUPERUSER_USERNAME }}\
         DJANGO_SUPERUSER_PASSWORD=${{ secrets.DJANGO_SUPERUSER_PASSWORD }}\
         DJANGO_SUPERUSER_EMAIL=${{ secrets.DJANGO_SUERPUSER_EMAIL }}\
@@ -46,7 +46,8 @@ jobs:
         POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD }}\
         POSTGRES_USER=${{ secrets.POSTGRES_USER }}\
         POSTGRES_HOST=${{ secrets.POSTGRES_HOST }}\
-        POSTGRES_PORT=${{ secrets.POSTGRES_PORT }}" > web/.env.prod
+        POSTGRES_PORT=${{ secrets.POSTGRES_PORT }}\
+        EOF
 
     - name: Update Kubernetes Secrets
       run: |
