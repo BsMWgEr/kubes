@@ -1,6 +1,9 @@
 
 web/.gitignore
 venv/
+.kube/
+.env.prod
+.env
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

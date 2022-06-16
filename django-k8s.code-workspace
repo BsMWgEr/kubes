@@ -1,0 +1,21 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "terminal.integrated.env.osx": {
+            "KUBECONFIG": "${workspaceFolder}/.kube/kubeconfig.yaml"
+        },
+        "terminal.integrated.env.windows": {
+            "KUBECONFIG": "${workspaceFolder}\\.kube\\kubeconfig.yaml"
+        },
+        "terminal.integrated.env.linux": {
+            "KUBECONFIG": "${workspaceFolder}/.kube/kubeconfig.yaml"
+        },
+        "yaml.schemas": {
+            "https://json.schemastore.org/github-workflow.json": "file:///Users/q/dev/kubes/.github/workflows/build.yaml"
+        }
+    }
+}

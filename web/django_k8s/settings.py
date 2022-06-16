@@ -21,12 +21,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.eniron.get('DJANGO_SECRET_KEY')
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = str(os.environ.get('DEBUG')) == "1"
 
+ENV_ALLOWED_HOSTS = os.environ.get('ENV_ALLOWED_HOSTS')
 ALLOWED_HOSTS = []
+if ENV_ALLOWED_HOSTS:
+    ALLOWED_HOSTS = [ ENV_ALLOWED_HOSTS ]
 
 
 # Application definition
@@ -94,9 +97,9 @@ DB_IS_AVAIL = all([
     DB_PORT
 ])
 
-POSTGRES_READY=str(os.environ.get('POSTGRES_READY')) == "1"
+DB_IGNORE_SSL=os.environ.get('DB_IGNORE_SSL') == "true"
 
-if DB_IS_AVAIL and POSTGRES_READY:
+if DB_IS_AVAIL:
     DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -105,8 +108,13 @@ if DB_IS_AVAIL and POSTGRES_READY:
         'PASSWORD': DB_PASSWORD,
         'HOST': DB_HOST,
         'PORT': DB_PORT,
+        }
     }
-}
+    if not DB_IGNORE_SSL:
+        DATABASES["default"]["OPTIONS"] = {
+            "sslmode": "require"
+        }
+
 
 
 # Password validation
