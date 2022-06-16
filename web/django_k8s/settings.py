@@ -29,7 +29,7 @@ DEBUG = str(os.environ.get('DEBUG')) == "1"
 ENV_ALLOWED_HOSTS = os.environ.get('ENV_ALLOWED_HOSTS')
 ALLOWED_HOSTS = []
 if ENV_ALLOWED_HOSTS:
-    ALLOWED_HOSTS = [ ENV_ALLOWED_HOSTS ]
+    ALLOWED_HOSTS = [ENV_ALLOWED_HOSTS]
 
 
 # Application definition
