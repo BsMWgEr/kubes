@@ -27,7 +27,7 @@ DEBUG = str(os.environ.get('DEBUG')) == "1"
 
 ENV_ALLOWED_HOSTS = os.environ.get('ENV_ALLOWED_HOSTS')
 
-ALLOWED_HOSTS = ['167.99.22.221', 'jsquad.dev']
+ALLOWED_HOSTS = ['jsquad.dev']
 
 
 # Application definition
