@@ -25,7 +25,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = str(os.environ.get('DEBUG')) == "1"
 
-ALLOWED_HOSTS = ['jsquad.dev']
+ALLOWED_HOSTS = ['167.99.22.221', 'jsquad.dev']
 
 
 # Application definition
