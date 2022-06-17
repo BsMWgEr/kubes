@@ -25,7 +25,7 @@ spec:
           - name: PORT
             value: "8001"
         ports:
-        - containerPort: 32283
+        - containerPort: 8001
       imagePullSecrets:
       - name: jsquad
 
@@ -41,6 +41,6 @@ spec:
     - name: http
       protocol: TCP
       port: 80
-      targetPort: 32283
+      targetPort: 8001
   selector:
     app: django-k8s-web-deployment
