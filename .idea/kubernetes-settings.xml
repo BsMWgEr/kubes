@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="KubernetesApiSettings">
+    <option name="kubeconfigPath" value="$PROJECT_DIR$/.kube/kubeconfig.yaml" />
+  </component>
   <component name="KubernetesSettings">
     <option name="getSpecFromCluster" value="true" />
   </component>
