@@ -55,4 +55,7 @@ django secret key generator:
 python -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())'
 django password generator URL safe:
 python -c 'import secrets;print(secrets.token_urlsafe(32))'
+
+
+kubect exec -it <podname> -- /bin/bash
 '''
