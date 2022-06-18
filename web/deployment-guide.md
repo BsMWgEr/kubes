@@ -48,3 +48,11 @@ export SINGLE_POD_NAME=$(kubectl get pod \
 then migrate:
 kubectl exec -it $SINGLE_POD_NAME -- bash /app/migrate.sh
 '''
+
+Extra commands:
+'''
+django secret key generator:
+python -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())'
+django password generator URL safe:
+python -c 'import secrets;print(secrets.token_urlsafe(32))'
+'''
