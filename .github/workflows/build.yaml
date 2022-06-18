@@ -34,7 +34,7 @@ jobs:
         docker push registry.digitalocean.com/jsquad/django-k8s-web --all-tags
     - name: K8s cluster kubeconfig file with/ short-lived creds
       run: |
-        doctl kubernetes cluster kubeconfig save --expiry-seconds 600 main
+        doctl kubernetes cluster kubeconfig save --expiry-seconds 600 jsquad
     - name: Update deployment secrets
       run: |
         cat << EOF >> web/.env.prod
