@@ -42,6 +42,8 @@ jobs:
         DJANGO_SUPERUSER_PASSWORD=${{ secrets.DJANGO_SUPERUSER_PASSWORD }}
         DJANGO_SUPERUSER_EMAIL=${{ secrets.DJANGO_SUPERUSER_EMAIL }}
         DJANGO_SECRET_KEY=${{ secrets.DJANGO_SECRET_KEY }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.SPACES_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.SPACES_KEY_ID }}
         ENV_ALLOWED_HOSTS=${{ secrets.ENV_ALLOWED_HOST }}
         DB_IS_AVAIL=${{ secrets.DB_IS_AVAIL }}
         POSTGRES_DB=${{ secrets.POSTGRES_DB }}
