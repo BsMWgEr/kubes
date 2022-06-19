@@ -43,6 +43,7 @@ jobs:
         DJANGO_SUPERUSER_EMAIL=${{ secrets.DJANGO_SUPERUSER_EMAIL }}
         DJANGO_SECRET_KEY=${{ secrets.DJANGO_SECRET_KEY }}
         ENV_ALLOWED_HOSTS=${{ secrets.ENV_ALLOWED_HOST }}
+        DB_IS_AVAIL=${{ secrets.DB_IS_AVAIL }}
         POSTGRES_DB=${{ secrets.POSTGRES_DB }}
         POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD }}
         POSTGRES_USER=${{ secrets.POSTGRES_USER }}
