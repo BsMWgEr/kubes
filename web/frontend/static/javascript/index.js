@@ -1,19 +1,19 @@
 function LoginButton() {
-    window.location.href = 'https://pandv.herokuapp.com/login'
+    window.location.href = 'https://jsquad.dev/login'
 }
 
 function LogoutButton() {
-    window.location.href = 'https://pandv.herokuapp.com/logout'
+    window.location.href = 'https://jsquad.dev/logout'
 }
 
 function AdminButton() {
-    window.location.href = 'https://pandv.herokuapp.com/admin'
+    window.location.href = 'https://jsquad.dev/admin'
 }
 
 function ResultsButton() {
-    window.location.href = 'https://pandv.herokuapp.com/results'
+    window.location.href = 'https://jsquad.dev/results'
 }
 
 function HomeButton() {
-    window.location.href = 'https://pandv.herokuapp.com/'
+    window.location.href = 'https://jsquad.dev/'
 }
