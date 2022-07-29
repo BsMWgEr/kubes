@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    {% block styles %}{% endblock %}
+    <title>Index</title>
+</head>
+<body>
+    <nav id="nav">
+        <div class="nav">
+            <div class="logo"><img src="{% static 'images/header_logo_300x300.png' %}"></div>
+            <h1>P&V Menu</h1>
+            <h2>Welcome, {{ current_user }}</h2>
+            {% if request.user.is_staff %}
+                {% if home %}
+                    <button id="results_page" type="button" onclick="ResultsButton()">Quiz Results</button>
+                {% elif q_result %}
+                    <button id="results_page" type="button" onclick="HomeButton()">Home</button>
+                {% endif %}
+                <button id="admin_button" type="button" onclick="AdminButton()">Admin</button>
+            {% endif %}
+            {% if not request.user.is_authenticated %}
+                <button id="login_button" type="button" onclick="LoginButton()">Login</button>
+            {% else %}
+            <button id="logout_button" type="button" onclick="LogoutButton()">Logout</button>
+            {% endif %}
+            <p id="quiz-score"></p>
+        </div>
+    </nav>
+    {% block content %}
+    {% endblock %}
+<script type="text/javascript" src="{% static 'javascript/index.js' %}"></script>
+</body>
+</html>

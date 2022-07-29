@@ -1,0 +1,40 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/frontpage.css' %}">
+    <link rel="stylesheet" href="{% static 'css/quiz_results.css' %}">
+{% endblock %}
+{% block content %}
+<h1>Quiz Results</h1>
+    {% if request.user.is_superuser %}
+    <select id="user_dropdown" name="user_dropdown" onchange="searchForQuiz()">
+    <option value="" selected >Choose an employee</option>
+    {% for y in all %}
+        <option value="{{ y.username }}">{{ y.username }}</option>
+    {% endfor %}
+    </select>
+    <div id="change_div"></div>
+
+    <ol id="all_quizes">
+    {% for x in result %}
+        {% if not x.correct == "0" %}
+        <li onclick="viewSpecificQuiz('{{ x.quiz_number }}', 1)">{{ x.quiz_number }} {{ x.user }} {{ x.start_time }}</li>
+        <div id="x{{ x.quiz_number }}"></div>
+        {% endif %}
+    {% endfor %}
+    </ol>
+    {% else %}
+        <ol id="all_quizes">
+    {% for x in result %}
+        {% if not x.correct == "0" %}
+        <li onclick="viewSpecificQuiz('{{ x.quiz_number }}', 1)">{{ x.quiz_number }} -- {{ x.score }}% -- {{ x.start_time }}</li>
+        <div id="x{{ x.quiz_number }}"></div>
+        {% endif %}
+    {% endfor %}
+    </ol>
+    {% endif %}
+
+
+    <script type="text/javascript" src="{% static 'javascript/quiz_results.js' %}"></script>
+
+{% endblock %}

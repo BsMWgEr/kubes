@@ -1,0 +1,178 @@
+
+
+fieldset {
+    margin: 0% 0% 0% 0%;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    min-width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#div_div {
+    width: 100%;
+    justify-content: center;
+    margin-left: 0%;
+}
+
+
+button {
+    color: white;
+    font-size: 20pt;
+    width: fit-content;
+    margin: 10px 10px 10px 10px;
+    height: 50px;
+    background: red;
+    border-radius: 10px;
+    border: hidden;
+    box-shadow: 0 0 10px black;
+}
+
+ol {
+    margin: 2% 10% 10% 10%;
+    background: rgba(0,0,0,.5);
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    padding: 5%;
+    color: white;
+
+}
+
+.ingredients {
+    display: flex;
+    flex-direction: column;
+}
+
+ul {
+    border: 5px solid black;
+    border-radius: 10px;
+    margin: 0 0 10px 0;
+
+}
+
+ul li {
+    padding: 0 0 10px 0;
+    text-align: left;
+
+}
+
+.title-color {
+    color: black;
+}
+
+.button-group {
+    min-width: 80%;
+    max-width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.main_button_group {
+    min-width: 80%;
+    max-width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.main_button_group button {
+    background: green;
+}
+
+input {
+    justify-content: center;
+    align-self: center;
+    width: 10%;
+}
+
+fieldset button {
+    justify-content: center;
+    align-self: center;
+}
+
+#clear-button {
+    background: gold;
+    color: black;
+}
+
+#next-question {
+    background: gold;
+    color: black;
+}
+
+.change-question h1 {
+    font-size: 30pt;
+}
+
+button:hover {
+    background: black;
+    color: white;
+    box-shadow: none;
+}
+
+.image-div {
+    flex-direction: column;
+}
+
+.top {
+
+}
+
+.bottom {
+
+}
+
+img {
+    border-radius: 10px;
+    margin: 1%;
+}
+
+@media screen and (max-width: 980px) {
+    main {
+        margin: 0% 0% 0% 0%;
+    }
+
+    #change-question {
+    margin: 20% 0% 40% 0%;
+    }
+
+    button {
+        width: 90%;
+        font-size: 25pt;
+        color: white;
+        height: fit-content;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .main_button_group {
+        flex-direction: column;
+    }
+
+     fieldset {
+        font-size: 24pt;
+    }
+
+    input {
+        justify-content: center;
+        align-self: center;
+        width: 10%;
+        height: 30pt;
+        margin: 5%;
+    }
+    fieldset button {
+        height: 100px;
+    }
+
+}

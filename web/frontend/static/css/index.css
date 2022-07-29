@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    min-width: 100%;
+    max-width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    background: radial-gradient(white, white, rgba(0,0,0,.5));
+    min-height: 900px;
+    max-height: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    position: sticky;
+    top: 0;
+}
+
+.nav {
+    margin-top: 0%;
+    min-width: 100%;
+    max-width: 100%;
+    height: 100px;
+    display: flex;
+    background: radial-gradient(orange, rgba(0,0,0,.9));
+    border: hidden;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px;
+}
+
+nav h1 {
+    font-size: 26pt;
+    margin-top: 5%;
+}
+
+nav h2 {
+    transform: translate(0%, -150%);
+}
+
+.logo {
+    position: absolute;
+    left: 0;
+}
+
+#login_button {
+    position: absolute;
+    left: 80%;
+}
+
+#logout_button {
+    position: absolute;
+    left: 70%;
+}
+
+#admin_button {
+    position: absolute;
+    left: 60%;
+}
+
+#results_page {
+    position: absolute;
+    left: 80%;
+}
+
+#quiz-score {
+    transform: translate(0, -360%);
+    color: white;
+}
+
+@media screen and (max-width: 980px) {
+
+    #login_button {
+        position: absolute;
+        top: 1%;
+        left: 1%;
+        width: 90%;
+    }
+
+    #logout_button {
+        position: absolute;
+        top: 1%;
+        left: 70%;
+        width: 25%;
+    }
+
+    #admin_button {
+        position: absolute;
+        top: 1%;
+        left: 1%;
+        width: 25%;
+    }
+
+    #results_page {
+        position: absolute;
+        top: 1%;
+        left: 35%;
+        width: 25%;
+    }
+
+    nav button {
+        width: 40%;
+        font-size: 12pt;
+        color: white;
+        height: fit-content;
+    }
+
+    .nav {
+        height: 200px;
+    }
+
+    #quiz-score {
+        position: absolute;
+        color: white;
+        top: 125%;
+        left: 2%;
+        font-size: 12px;
+    }
+
+    .logo {
+        position: absolute;
+        left: 10%;
+        top: 25%;
+    }
+
+    nav h1 {
+        margin-top: 0;
+        font-size: 12pt;
+        color: rgba(0,0,0,0);
+        transform: translate(0%, 360%)
+    }
+
+    nav h2 {
+        transform: translate(00%, 110%)
+    }
+}

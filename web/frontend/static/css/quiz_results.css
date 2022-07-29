@@ -1,0 +1,28 @@
+
+#answer_attempts_div button {
+    position: sticky;
+    top: 145px;
+}
+
+#clear_all_results {
+    position: sticky;
+    top: 145px;
+}
+
+#all_quizes {
+
+}
+
+#user_dropdown {
+    position: sticky;
+    top:100px;
+    border: hidden;
+    font-size: 20pt;
+    background: black;
+    color: white;
+}
+
+ol {
+    width: 50%;
+    margin-left: 23%;
+}

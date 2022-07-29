@@ -1,0 +1,39 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block styles %}<link rel="stylesheet" href="{% static 'css/frontpage.css' %}">{% endblock %}
+{% block content %}
+
+
+    {% if request.user.is_authenticated %}
+
+    <main>
+        <div id="main_button_group" class="main_button_group">
+            <button type="button" onclick="ClearAll();StartQuiz()">Quiz</button>
+            <button type="button" onclick="ClearAll();viewMenu()">View Menu</button>
+            <button type="button" onclick="ClearAll();viewDrinks()">View Drink Menu</button>
+        </div>
+        <div id="button_group" class="button-group"></div>
+        <div id="div_div"></div>
+    </main>
+
+    <div id="change-question" class="change-question"></div>
+
+    {% else %}
+        <h1>Welcome to Post and Vine, Please Login.</h1>
+        <h1>Login credentials are provided by your manager</h1>
+        <p>Or use --> username: testuser --> password: Admin12345</p>
+    {% endif %}
+
+    <div id="image-div" class="image-div">
+        <div id="top" class="top">
+            <img src="{% static 'images/gallery8.png' %}">
+            <img src="{% static 'images/gallery9.png' %}">
+        </div>
+        <div id="bottom" class="bottom">
+            <img src="{% static 'images/gallery11.png' %}">
+            <img src="{% static 'images/IMG_1539.jpg' %}" width="250" height="250">
+        </div>
+    </div>
+    <script src="{% static  'javascript/frontpage.js' %}"></script>
+
+{% endblock %}
