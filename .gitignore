@@ -1,9 +1,12 @@
 
-web/.gitignore
+
 venv/
 .kube/
 .env.prod
 .env
+web/.env
+web/.env.prod
+web/db.sqlite3
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -109,10 +112,10 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
+
 .venv
 env/
-venv/
+
 ENV/
 env.bak/
 venv.bak/
