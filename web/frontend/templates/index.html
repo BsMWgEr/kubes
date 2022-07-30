@@ -1,6 +1,6 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
+{% load static %}
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,7 +19,7 @@
                 {% if home %}
                     <button id="results_page" type="button" onclick="ResultsButton()">Quiz Results</button>
                 {% elif q_result %}
-                    <button id="results_page" type="button" onclick="HomeButton()">Home</button>
+                    <button id="home_page_b" type="button" onclick="HomeButton()">Home</button>
                 {% endif %}
                 <button id="admin_button" type="button" onclick="AdminButton()">Admin</button>
             {% endif %}

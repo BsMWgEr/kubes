@@ -67,6 +67,11 @@ nav h2 {
     left: 80%;
 }
 
+#home_page_b {
+    position: absolute;
+    left: 80%;
+}
+
 #quiz-score {
     transform: translate(0, -360%);
     color: white;
